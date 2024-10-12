@@ -16,17 +16,10 @@ def caesar_encrypt(plaintext, key):
             result += char
     return result
 
-# Contoh penggunaan dengan file
 input_file = '/home/re1jie/plaintext.txt'
 output_file = '/home/re1jie/ciphertext.txt'
 key = 3
-
-# Membaca isi file
 plaintext = read_file(input_file)
-
-# Mengenkripsi teks
 ciphertext = caesar_encrypt(plaintext, key)
-
-# Menyimpan hasil enkripsi ke file baru
 write_file(output_file, ciphertext)
 print("Encrypted")
