@@ -1,6 +1,14 @@
 alph_lwr = [chr(i) for i in range(ord('a'), ord('z')+1)]
 alph_upr = [chr(i) for i in range(ord('A'), ord('Z')+1)]
 
+def read_file(filetext):
+    with open(filetext, 'r') as file:
+        return file.read()
+
+def write_file(filetext, isitext):
+    with open(filetext, 'w') as file:
+        file.write(isitext)
+
 def dekripsi(ciphertext, key):
     result = ""
     for char in ciphertext:
@@ -16,8 +24,10 @@ def dekripsi(ciphertext, key):
             result += char
     return result
 
-ciphertext = "khoor zruog"
+input_file = '/home/re1jie/ciphertext.txt'
+output_file = '/home/re1jie/plaintext_i.txt'
 key = 3
-
+ciphertext = read_file(input_file)
 plaintext= dekripsi(ciphertext, key)
-print(plaintext)
+write_file(output_file, plaintext)
+print("pesan telah ter dekripsi di path : "+output_file)
