@@ -24,8 +24,8 @@ def enkripsi(plaintext, key):
             result += char
     return result
 
-input_file = '/home/re1jie/plaintext.txt'
-output_file = '/home/re1jie/ciphertext.txt'
+input_file = '/home/re1jie/kriptografi/plaintext.txt'
+output_file = '/home/re1jie/kriptografi/ciphertext.txt'
 key = 3
 plaintext = read_file(input_file)
 ciphertext = enkripsi(plaintext, key)
